@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config();
+require('dotenv').config({path: __dirname + '/.env'});
 const axios = require('axios');
 const stringify = require('qs-stringify');
 const fs = require('fs');
@@ -38,7 +38,7 @@ const fs = require('fs');
             // get billing information of each account
             try {
                 response = await axios.get(
-                    process.env.MORPHEUS_API_URL + '/api/billing/account/gg' + account.id +
+                    process.env.MORPHEUS_API_URL + '/api/billing/account/' + account.id +
                     '?startDate=' + startDate.toISOString() + '&endDate=' + endDate.toISOString(),
                     {
                         headers: { 'Authorization': 'BEARER' + token },
@@ -47,8 +47,8 @@ const fs = require('fs');
                 process.stdout.write('Billing information of account ' + account.name + ' retrieved.\n');
 
                 // write header to CSV file
-                fs.mkdirSync('./output', { recursive: true });
-                let csvFile = './output/' + account.name + '.csv';
+                fs.mkdirSync(__dirname + '/output', { recursive: true });
+                let csvFile = __dirname + '/output/' + account.name + '.csv';
                 let wstream = fs.createWriteStream(csvFile);
                 wstream.write(
                     'Cloud,Instance,Usage Start Date,Usage End Date,Hours,Currency,' +
