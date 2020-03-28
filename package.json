@@ -1,0 +1,26 @@
+{
+  "name": "morpheus-billing",
+  "version": "0.0.1",
+  "description": "",
+  "main": "morpheus-billing.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "qs-stringify": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyericso/morpheus-billing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyericso/morpheus-billing/issues"
+  },
+  "homepage": "https://github.com/wyericso/morpheus-billing#readme"
+}
