@@ -4,7 +4,7 @@
   "description": "",
   "main": "morpheus-billing.js",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "qs-stringify": "^1.2.0"
